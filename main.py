@@ -5,6 +5,6 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-type'] = 'text/plain'
         self.response.write('hellow,world')
 
-app = webapp2.WSGIApplicaion([
+app = webapp2.WSGIApplication([
     ('/',MainPage),
 ], debug=True)
