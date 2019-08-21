@@ -1,16 +1,31 @@
 import webapp2
+import jinja2
+import os
+
+jinja_env = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-type'] = 'text/plain'
-        self.response.write('hellow,world')
+        result_template = jinja_env.get_template('templates/index.html')
+        self.response.write(result_template.render())
 
-class QuestionPage(webapp2.RequestHandler):
-    def get(self:)
-        self.response.headers['content-type'] = 'text/plain'
-        self.response.write('questions here')
+class pageOneHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = jinja_env.get_template('templates/pageOne.html')
+        self.response.write(result_template.render())
+
+class deathPageHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = jinja_env.get_template('templates/deathPage.html')
+        self.response.write(result_template.render())
+
+
 
 app = webapp2.WSGIApplication([
     ('/',MainPage),
-    ('questions',QuestionPage),
+    ('/pageOne',pageOneHandler),
+    ('/deathPage',deathPageHandler)
 ], debug=True)

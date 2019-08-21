@@ -1,13 +1,22 @@
 https://codepen.io/rzim2082/pen/jrWYJW
 
 var question = prompt(chara + ", has awoken on the beach of the hidden isalnd you have been looking for! You have almost no resources to survive the night what do you do next!?")
-var images = document.getElementById("images"); 
+var images = document.getElementById("images");
 var text = document.getElementById("text");
 var buttonBox = document.getElementById('buttonBox');
 var input = document.getElementById('input');
 var chara;
 
+function myFunction(){
+  var x =document.getElementById('my check').checked;
+  document.getElementById("demo").innerHTML = x;
+  var q =getElementById("")
 
+}
+
+function clickFunction() {
+  
+}
 
 input.onkeypress = function(event) {
   console.log(input.value);
