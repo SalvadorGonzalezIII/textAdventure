@@ -30,10 +30,23 @@ class pageTwoHandler(webapp2.RequestHandler):
         result_template = jinja_env.get_template('templates/pageTwo.html')
         self.response.write(result_template.render())
 
+class pageThreeHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = jinja_env.get_template('templates/pageThree.html')
+        self.response.write(result_template.render())
+
+class pageFourHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = jinja_env.get_template('templates/pageFour.html')
+        self.response.write(result_template.render())
+
+
 
 app = webapp2.WSGIApplication([
     ('/',MainPage),
     ('/pageOne',pageOneHandler),
     ('/deathPageOne',deathPageOneHandler),
-    ('/pageTwo',pageTwoHandler)
+    ('/pageTwo',pageTwoHandler),
+    ('/pageThree',pageThreeHandler),
+    ('/pageFour',pageFourHandler)
 ], debug=True)
