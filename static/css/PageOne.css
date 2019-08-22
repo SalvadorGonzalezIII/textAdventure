@@ -1,5 +1,13 @@
+h1
+{
+color:white;
+text-align: center;
+}
+body{
+  background-image: url("http://cdn7.dissolve.com/p/D2137_7_392/D2137_7_392_0004_600.jpg");
+  background-size: cover;
+}
 p
 {
-color:blue;
-font-size: 100px;
+  text-align: center;
 }
