@@ -1,13 +1,16 @@
-h1
-{
-color:white;
-text-align: center;
-}
-body{
-  background-image: url("http://cdn7.dissolve.com/p/D2137_7_392/D2137_7_392_0004_600.jpg");
-  background-size: cover;
-}
-p
-{
+h2{
+  color: white;
   text-align: center;
+}
+
+a{
+  color: yellow;
+}
+
+body{
+  color: gold;
+  background-image: url("https://media.psu.com/media/articles/image/PS4_Uncharted4Artwork.jpg");
+  background-size: cover;
+  text-align: center;
+
 }
