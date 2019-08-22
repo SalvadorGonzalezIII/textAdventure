@@ -1,0 +1,15 @@
+h2{
+  color: black;
+  text-align: center;
+}
+
+a{
+color: blue;
+font-size: 20px;
+}
+
+body{
+  text-align: center;
+  background-image: url(https://www.islandconservation.org/wp-content/uploads/2016/02/Island-Conservation-Science-Robinson-Crusoe-Island-Forest-Irene-Espinosa.jpg);
+  background-size: cover;
+}
