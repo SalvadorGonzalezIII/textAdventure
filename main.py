@@ -31,7 +31,7 @@ class pageOneHandler(webapp2.RequestHandler):
 class deathPageOneHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/deathPageOne.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageTwoHandler(webapp2.RequestHandler):
     def get(self):
@@ -41,52 +41,52 @@ class pageTwoHandler(webapp2.RequestHandler):
 class pageThreeHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageThree.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageFourHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageFour.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageFiveHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageFive.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageSixHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageSix.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageSevenHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageSeven.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageEightHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageEight.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageNineHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageNine.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageTenHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageTen.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageElevenHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageEleven.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageTwelveHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageTwelve.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 
 
