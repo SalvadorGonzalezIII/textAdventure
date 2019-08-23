@@ -122,6 +122,10 @@ class pageTwelveHandler(webapp2.RequestHandler):
         result_template = jinja_env.get_template('templates/pageTwelve.html')
         self.response.write(result_template.render(Nombre))
 
+class tutorialHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = jinja_env.get_template('templates/tutorial.html')
+        self.response.write(result_template.render(Nombre))
 
 
 app = webapp2.WSGIApplication([
@@ -138,5 +142,6 @@ app = webapp2.WSGIApplication([
     ('/pageNine',pageNineHandler),
     ('/pageTen',pageTenHandler),
     ('/pageEleven',pageElevenHandler),
-    ('/pageTwelve',pageTwelveHandler)
+    ('/pageTwelve',pageTwelveHandler),
+    ('/tutorial',tutorialHandler)
 ], debug=True)
