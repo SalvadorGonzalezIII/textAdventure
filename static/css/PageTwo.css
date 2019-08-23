@@ -2,6 +2,7 @@ h2{
   color: orange;
   background-color: green;
   text-align: center;
+  display: inline;
 }
 
 a{

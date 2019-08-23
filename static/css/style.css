@@ -5,10 +5,16 @@ h1{
 h2{
   color: red;
   text-align: center;
+  background-color: #2e77e6;
+}
+p{background-color: #2e77e6;
+  display: inline;
 }
 h3{
   color: red;
   text-align: center;
+    background-color: #2e77e6;
+  display: inline;
 }
 form{
   text-align: center;
