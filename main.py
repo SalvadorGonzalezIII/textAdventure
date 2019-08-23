@@ -3,7 +3,10 @@ import jinja2
 import os
 
 #from model import *
-
+user = ""
+Nombre = {
+"userN": user
+}
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -19,6 +22,11 @@ class pageOneHandler(webapp2.RequestHandler):
 #question = questions(question =  "you are on island what do you do now?", answer1 = "stay on the beach", answer2)
         result_template = jinja_env.get_template('templates/pageOne.html')
         self.response.write(result_template.render())
+    def post(self):
+        user=self.request.get("user")
+        Nombre["userN"] = user
+        result_template = jinja_env.get_template('templates/pageOne.html')
+        self.response.write(result_template.render(Nombre))
 
 class deathPageOneHandler(webapp2.RequestHandler):
     def get(self):
@@ -28,7 +36,7 @@ class deathPageOneHandler(webapp2.RequestHandler):
 class pageTwoHandler(webapp2.RequestHandler):
     def get(self):
         result_template = jinja_env.get_template('templates/pageTwo.html')
-        self.response.write(result_template.render())
+        self.response.write(result_template.render(Nombre))
 
 class pageThreeHandler(webapp2.RequestHandler):
     def get(self):
